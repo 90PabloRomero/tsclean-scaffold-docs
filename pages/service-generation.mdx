@@ -1,0 +1,9 @@
+# Service Generation
+
+1. The **`scaffold create:service`** command will generate the interface and the service that implements it in the **`domain layer [use-cases]`**, this task has **`--name`** as parameter and this is required. The name must be hyphenated if it is a compound name.
+
+   Example: **`--name=user, --name=user-detail, --name=post-comments-user.`**
+
+```shell
+   scaffold create:service --name=user
+```

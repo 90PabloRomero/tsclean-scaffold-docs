@@ -1,15 +1,14 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
-  }
+  "project-generation": "Project Generation",
+  "model-generation": "Model Generation",
+  "interface-generation": "Interface Generation",
+  "interface-resource-generation": "Interface Resource Generation",
+  "service-generation": "Service Generation",
+  "service-resource-generation": "Service Resource Generation",
+  "adapter-ORM-generation": "Adapter ORM Generation",
+  "adapter-simple-generation": "Adapter Simple Generation",
+  "controller-generation": "Controller Generation",
+  "decorators": "Decorators",
+  "advanced": "Use cases examples"
 }

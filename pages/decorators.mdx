@@ -1,0 +1,70 @@
+# Decorators
+
+Decorators allow us to add annotations and metadata or change the behavior of classes, properties, methods, parameters and accessors.
+
+`@Services` Decorator to inject the logic of this class as a service.
+
+```typescript
+@Services
+export class UserServiceImpl {}
+```
+
+`@Adapter` Decorator to keep the reference of an interface and to be able to apply the SOLID principle of Dependency Inversion.
+
+```typescript
+// Constant to have the interface reference.
+export const USER_REPOSITORY = "USER_REPOSITORY";
+
+export interface IUserRepository<T> {
+  save: (data: T) => Promise<T>;
+}
+
+@service
+export class UserServiceImpl {
+  constructor(
+    @Adapter(USER_REPOSITORY)
+    private readonly userRespository: IUserRepository
+  ) {}
+}
+```
+
+`@Mapping` Decorator that allows us to create the path of an end point.
+
+```typescript
+@Mapping("api/v1/users")
+export class UserController {}
+```
+
+#### Decorators HTTP
+
+`@Get()` Decorator to solve a request for a specific resource.
+
+`@Post()` Decorator used to send an entity to a specific resource.
+
+`@Put()` Decorator that replaces the current representations of the target resource with the payload of the request.
+
+`@Delete()` Decorator that deletes the specific resource.
+
+`@Params()` Decorator to read the parameters specified in a method.
+
+`@Body()` Decorator that passes the payload of a method in the request.
+
+```typescript
+@Mapping("api/v1/users")
+export class UserController {
+  @Get()
+  getAllUsers() {}
+
+  @Get(":id")
+  getByIdUser(@Params() id: string | number) {}
+
+  @Post()
+  saveUser(@Body() data: T) {}
+
+  @Put(":id")
+  updateByIdUser(@Params() id: string | number, @Body data: T) {}
+
+  @Delete(":id")
+  deleteByIdUser(@Params() id: string | number) {}
+}
+```

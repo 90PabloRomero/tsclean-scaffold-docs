@@ -1,0 +1,18 @@
+# Interface Generation
+
+The **`scaffold create:interface`** command generates an interface, the location of the file is according to the
+component where it is required. where it is required. The name must have a hyphen in case it is a compound name.
+
+Example: **`--name=user, --name=user-detail, --name=post-comments-user.`**
+
+```shell
+   scaffold create:interface --name=user-detail --path=entities
+```
+
+```shell
+   scaffold create:interface --name=user-detail --path=service
+```
+
+```shell
+   scaffold create:interface --name=user-detail --path=infra
+```

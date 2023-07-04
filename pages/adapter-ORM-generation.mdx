@@ -1,0 +1,22 @@
+# Adapter ORM Generation
+
+1. The **`scaffold create:adapter-orm`** command will generate an adapter in the **`infrastructure layer`**,
+   this task has **`--name`** and **`--orm`** as parameters this is required. The name of the **`--manager`** parameter corresponds to the database manager.
+   After the adapter is generated, the provider must be included in the app.ts file and then the name of the provider in the corresponding service must be passed through the constructor.
+
+   Example: **`--name=user --orm=sequelize --manager=mysql`**
+
+2. By convention the plugin handles names in singular, this helps to create additional code that benefits each component.
+   In this case when you create the adapter with the name that matches the entity in the domain models folder, it does the automatic import in all the component of the adapter.
+
+- command to generate sequelize orm.
+
+```shell
+   scaffold create:adapter-orm --name=user --orm=sequelize --manager=mysql
+```
+
+- command to generate the mongoose orm.
+
+```shell
+   scaffold create:adapter-orm --name=user --orm=mongoose
+```

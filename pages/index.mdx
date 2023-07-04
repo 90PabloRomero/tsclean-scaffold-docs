@@ -1,11 +1,33 @@
-# Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+# Clean Architecture Scaffold
 
-## What is Nextra?
+[![npm version](https://badge.fury.io/js/%40tsclean%2Fscaffold.svg)](https://badge.fury.io/js/%40tsclean%2Fscaffold)
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+Clean Architecture Scaffold is a powerful CLI tool that helps you create the structure of a Node.js and TypeScript project based on clean architecture principles. It provides a solid foundation for building RESTful APIs by integrating an Express application as a Node.js framework in the application layer.
 
-## Documentation
+## Features
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+- Generates the project structure with the command `scaffold create:project`.
+- Generates models in the domain layer with the command `scaffold create:entity`.
+- Generates interfaces in the required component with the command `scaffold create:interface`.
+- Generates interface resources with the command `scaffold create:interface-resource`.
+- Generates services and their implementations in the domain layer with the command `scaffold create:service`.
+- Generates service resources with the command `scaffold create:service-resource`.
+- Generates ORM adapters in the infrastructure layer with the command `scaffold create:adapter-orm`.
+
+### Get started
+
+To use the Clean Architecture Scaffold, install the plugin globally on your computer:
+
+```shell
+    npm i -g @tsclean/scaffold
+```
+
+After that we generate the project structure with the command **`scaffold create:project`**, which receives one parameter **`--name`**.
+
+```shell
+    scaffold create:project --name=[project name]
+```
+
+```shell
+    cd project name
+```
